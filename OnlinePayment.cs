@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace OnlineShoppingMall
 {
-    public abstract class ShoppingPayment
+    internal class OnlinePayment
     {
-        public decimal Amount { get; set; }
-        public abstract bool ProcessPayment();
     }
 }
