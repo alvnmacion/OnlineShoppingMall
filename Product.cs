@@ -9,26 +9,25 @@ namespace OnlineShoppingMall
 {
     public class Product
     {
+        public int Id { get; set; }
         public string Name { get; set; }
-        public int Price { get; set; }
+        public decimal Price { get; set; }
         public string Description { get; set; }
         public string Category { get; set; }
-        public int ProductId { get; set; }
-        public string ProductDescription { get; set; }
-        public string ProductCategory { get; set; }
-        public string Rating { get; set; }
+        public string ProductRating { get; set; }
 
-        public Product(string name,int price, string description, string category, int productId, string prodDescription, string prodCategory, string rating)
+        public Product(string name,decimal price, string description, string category, string rating)
         {
             this.Name = name;
             this.Price = price;
             this.Description = description;
             this.Category = category;
-            this.ProductId = productId;
-            this.ProductDescription = prodDescription;
-            this.ProductCategory = prodCategory;
-            this.Rating = rating;
+            this.ProductRating = rating;
         }
 
+        internal bool GetProduct()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

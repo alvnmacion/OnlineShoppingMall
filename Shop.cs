@@ -8,6 +8,8 @@ namespace OnlineShoppingMall
 {
     public class Shop
     {
+        private IEnumerable<Product> products;
+
         public string ShopName { get; set; }
         public int ShopRating { get; set; }
         public List<Product> Products { get; set; }
@@ -29,7 +31,16 @@ namespace OnlineShoppingMall
             Console.WriteLine("Shop Products:");
             foreach(Product product in products)
             {
-                Console.WriteLine($"- {product.Name} -(${product.Description}) -(${product.Price}) -(${product.Rating}");
+                Console.WriteLine($"- {product.Name} -(${product.Description}) -(${product.Price}) -(${product.ProductRating}");
+            }
+        }
+
+        public void GetProducts()
+        {
+            foreach (Product product in products)
+            {
+                Console.WriteLine(product.GetProduct());
+                Console.WriteLine();
             }
         }
     }
