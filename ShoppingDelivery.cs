@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OnlineShoppingMall
 {
-    public class ShoppingDelivery
+    public class ShoppingDelivery : ShoppingPayment
     {
         private string address;
         private decimal cost;
@@ -25,6 +25,11 @@ namespace OnlineShoppingMall
         public decimal Cost
         {
             get{return cost;}
+        }
+
+        public override bool ProcessPayment()
+        {
+            throw new NotImplementedException();
         }
     }
 }

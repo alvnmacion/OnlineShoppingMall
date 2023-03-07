@@ -13,11 +13,15 @@ namespace OnlineShoppingMall
         public string ShoppingCartId { get; set; }
         public int ProductSize { get; set; }
 
+        ShoppingPayment payment { get; set; }
+
         public ShoppingCart(string shoppingCartId, int productSize)
         {
             this.Products = new List<Product>();
             this.ShoppingCartId = shoppingCartId;
             this.ProductSize = productSize;
+            this.payment = new ShoppingPayment();
+
         }
 
         public void AddProduct(Product product)

@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OnlineShoppingMall
+﻿namespace OnlineShoppingMall
 {
-    public class Order
+    public class Order : Product
+
     {
         private List<Product> products;
         private readonly decimal total;
@@ -19,7 +14,7 @@ namespace OnlineShoppingMall
 
         public decimal Total
         {
-            get{return total;}
+            get { return total; }
         }
 
         private decimal CalculateTotal()
